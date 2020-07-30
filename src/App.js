@@ -1,12 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Search from './components/Search';
+import React from "react";
+import Search from "./components/Search";
+import Table from "./components/Table";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <div className="App">
+      <Navbar />
       <Search />
+      <Table />
     </div>
   );
 }
