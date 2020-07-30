@@ -1,43 +1,36 @@
 import React, { Component } from "react";
-import API from "./API";
+import API from "../utils/API";
 
-export default class Search extends Component{
+export default class Search extends Component {
+  state = {
+    employees: [{}],
+    filteredEmployees: [{}],
+  };
 
-    state = {
-        employees: [{}],
-        filteredEmployees: [{}]
-    }
-   
+  handleSearch = (event) => {
+    const search = event.target.value;
+    console.log(search);
+  };
 
-    handleSearch = (event) => {
-        const search = event.target.value;
-        console.log(search);
-      };
+  componentDidMount() {
+    API.getUsers().then((results) => {
+      console.log("Results: " + JSON.stringify(results.data.results));
+      this.setState({ users: results.data.results });
+    });
+  }
 
-      componentDidMount(){
-          API.getUsers(). then(results => {
-              console.log("Results: "+JSON.stringify(results));
-              this.setState({users: results.data.results})
-          })
-      }
-      
+  render() {
+    return (
+      <div>
+        <form>
+          <input
+            className="search"
+            placeholder="search"
+            onChange={(e) => this.handleSearch(e)}
+          />
+        </form>
+      </div>
+    );
+  }
+}
 
-       render(){
-            
-        return (
-          <div>
-            <form>
-              <input
-                className="search"
-                placeholder="search"
-                onChange={(e) => this.handleSearch(e)}
-              />
-            </form>
-          </div>
-        );
-      };
-    };
-
-
-
-// export default Search;
