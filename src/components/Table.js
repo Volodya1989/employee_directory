@@ -10,7 +10,7 @@ const Table = () => {
           <th>Image</th>
           <th onClick="">Name</th>
           <th>Phone</th>
-          <th>E-mail</th>
+          <th>Email</th>
           <th>DOB</th>
         </tr>
       </thead>
