@@ -18,7 +18,7 @@ export default class Search extends Component {
   componentDidMount() {
     API.getUsers()
       .then((results) => {
-        console.log("Results: " + JSON.stringify(results.data.results));
+        // console.log("Results: " + JSON.stringify(results.data.results));
         this.setState({
           employees: results.data.results,
           filteredEmployees: results.data.results,

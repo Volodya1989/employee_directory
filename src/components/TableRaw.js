@@ -2,8 +2,6 @@ import React from "react";
 import Moment from "react-moment";
 
 const TableRaw = (props) => {
-  console.log(props.results[0]);
-
   return (
     <tbody className="">
       {props.results.map((result) => (
@@ -16,9 +14,11 @@ const TableRaw = (props) => {
             {result.name.first} {result.name.last}
           </td>
 
-      <td>{result.phone}</td>
+          <td>{result.phone}</td>
           <td className="email">
-            <a href="mailto:{result.email}">{result.email}</a>
+            <a href="mailto:{result.email}" target="__blank">
+              {result.email}
+            </a>
           </td>
           <td>
             <Moment format="MM/DD/YYYY">{result.dob.date}</Moment>
