@@ -2,27 +2,30 @@ import React from "react";
 import Moment from "react-moment";
 
 const TableRaw = (props) => {
+  console.log(props.results[0]);
+
   return (
     <tbody className="">
-      {/* {props.results.map((result) => ( */}
-        <tr className="table" key="">
+      {props.results.map((result) => (
+        <tr className="table" key={result.login.uuid}>
           <td>
-            Image
-            <img className="" src="" alt="" />
+            <img className="" src={result.picture.medium} alt="" />
           </td>
 
-          <td> Name </td>
+          <td>
+            {result.name.first} {result.name.last}
+          </td>
 
-          <td>Pnone</td>
+      <td>{result.phone}</td>
           <td className="email">
-            <a href="/">Email</a>
+            <a href="mailto:{result.email}">{result.email}</a>
           </td>
           <td>
-            <Moment format="MM/DD/YYYY">Date</Moment>
+            <Moment format="MM/DD/YYYY">{result.dob.date}</Moment>
           </td>
-          <td>Age</td>
+          <td>{result.dob.age}</td>
         </tr>
-      {/* ))} */}
+      ))}
     </tbody>
   );
 };
