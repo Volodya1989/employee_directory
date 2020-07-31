@@ -17,12 +17,13 @@ const TableRaw = (props) => {
           <td className="email">
             <a href="/">Email</a>
           </td>
-          <td>
+          {/* <td>
             <Moment format="MM/DD/YYYY">Date</Moment>
-          </td>
+          </td> */}
           <td>Age</td>
         </tr>
       {/* ))} */}
+      
     </tbody>
   );
 };
