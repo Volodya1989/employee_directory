@@ -5,32 +5,50 @@ import TableRaw from "./TableRaw";
 export default class Table extends Component {
   state = {
     employees: [],
-    sortedArray: [],
+    sortedName: [],
+    sortedDOB: [],
     sortType: "asc",
   };
 
-  handleSearch = (event) => {
-    const search = event.target.value;
-    // console.log(search);
-  };
+ 
   handleSortName = () => {
-    const sortedAr = this.state.sortedArray;
+    const sortAr = this.state.sortedName;
     if (this.state.sortType === "asc") {
-      const sorted = sortedAr.sort((a, b) =>
+      const sorted = sortAr.sort((a, b) =>
         a.name.first > b.name.first ? 1 : -1
       );
-      console.log("sorted array: " + JSON.stringify(sorted));
       this.setState({
-        sortedArray: sorted,
+        sortedName: sorted,
         sortType: "desc",
       });
-    } else  {
-      const sorted = sortedAr.sort((a, b) =>
+    } else {
+      const sorted = sortAr.sort((a, b) =>
         a.name.first > b.name.first ? -1 : 1
       );
-      console.log("sorted array: " + sorted);
       this.setState({
-        sortedArray: sorted,
+        sortedName: sorted,
+        sortType: "asc",
+      });
+    }
+  };
+  handleSortDOB = () => {
+    const sortAr = this.state.employees;
+    if (this.state.sortType === "asc") {
+      const sortDate = sortAr
+        .sort(
+          (a, b) =>
+            new Date(a.dob.date).getTime() - new Date(b.dob.date).getTime()
+        ).reverse();
+      this.setState({
+        sortedDOB: sortDate,
+        sortType: "desc",
+      });
+    } else {
+      const sortDate = sortAr.sort((a, b) =>
+        new Date(a.dob.date) - new Date(b.dob.date) ? -1 : 1
+      );
+      this.setState({
+        sortedDOB: sortDate,
         sortType: "asc",
       });
     }
@@ -39,10 +57,10 @@ export default class Table extends Component {
   componentDidMount() {
     API.getUsers()
       .then((results) => {
-        // console.log("Results: " + JSON.stringify(results.data.results));
         this.setState({
           employees: results.data.results,
-          sortedArray: results.data.results,
+          sortedName: results.data.results,
+          sortedDOB: results.data.results,
         });
       })
       .catch((err) => {
@@ -59,7 +77,7 @@ export default class Table extends Component {
             <th onClick={this.handleSortName}>Name</th>
             <th>Phone</th>
             <th>Email</th>
-            <th>DOB</th>
+            <th onClick={this.handleSortDOB}>DOB</th>
             <th>Age</th>
           </tr>
         </thead>
@@ -69,4 +87,3 @@ export default class Table extends Component {
   }
 }
 
-//export default Table;
