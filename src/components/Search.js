@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 import API from "../utils/API";
+import Table from "./Table";
+import Navbar from "./Navbar";
+import Wrapper from "./Wrapper";
 
 export default class Search extends Component {
   state = {
-    employees: [{}],
-    filteredEmployees: [{}],
+    employees: [],
+    filteredEmployees: [],
   };
 
   handleSearch = (event) => {
@@ -13,15 +16,23 @@ export default class Search extends Component {
   };
 
   componentDidMount() {
-    API.getUsers().then((results) => {
-      console.log("Results: " + JSON.stringify(results.data.results));
-      this.setState({ users: results.data.results });
-    });
+    API.getUsers()
+      .then((results) => {
+        console.log("Results: " + JSON.stringify(results.data.results));
+        this.setState({
+          employees: results.data.results,
+          filteredEmployees: results.data.results,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   render() {
     return (
-      <div>
+      <Wrapper>
+        <Navbar />
         <form>
           <input
             className="search"
@@ -29,8 +40,8 @@ export default class Search extends Component {
             onChange={(e) => this.handleSearch(e)}
           />
         </form>
-      </div>
+        <Table />
+      </Wrapper>
     );
   }
 }
-
