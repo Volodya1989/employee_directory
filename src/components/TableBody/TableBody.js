@@ -1,11 +1,12 @@
 import React from "react";
 import Moment from "react-moment";
+import './table-body.styles.css';
 
-const TableRaw = (props) => {
+const TableBody = (props) => {
   return (
     <tbody className="">
       {props.results.map((result) => (
-        <tr className="table" key={result.login.uuid}>
+        <tr className="table table-row" key={result.login.uuid}>
           <td>
             <img className="" src={result.picture.medium} alt="" />
           </td>
@@ -30,4 +31,4 @@ const TableRaw = (props) => {
   );
 };
 
-export default TableRaw;
+export default TableBody;
