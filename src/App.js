@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import API from "./utils/API";
-import Search from "./components/Search";
+import Search from "./components/Search/Search";
 import Table from "./components/Table";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 
 class App extends Component {
   constructor () {
@@ -104,7 +104,7 @@ class App extends Component {
     const { search, employees, filteredEmployees } = this.state;
 
     return (
-      <div className="container ">
+      <>
         <Navbar />
         <Search onSearch={this.handleEmployeeSearch} />
         <Table
@@ -112,7 +112,7 @@ class App extends Component {
           onSortByName={this.handleSortByName}
           onSortByDOB={this.handleSortByDOB}
         />
-      </div>
+      </>
     );
   }
 }
