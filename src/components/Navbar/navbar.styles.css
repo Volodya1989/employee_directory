@@ -1,0 +1,20 @@
+.navbar {
+  text-align: center;
+  background-color: rgb(8, 8, 138);
+  color: rgba(8, 173, 238, 0.938);
+  font-family: "Roboto", Georgia, "Times New Roman", Times, serif;
+  display: inline-block;
+  max-width: 100%;
+  border-bottom: rgb(129, 189, 238) solid 4px;
+}
+.navHeader {
+  text-align: center;
+}
+ h1 {
+    font-style: bold;
+}
+/* .navbar h5{
+    font-style: italic;
+    font-weight: 300;
+} */
+

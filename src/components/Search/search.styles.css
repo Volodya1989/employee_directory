@@ -1,0 +1,12 @@
+input {
+  margin: 30px 30px;
+  text-align: center;
+  display: inline-flex;
+  width: 20%;
+  height: 40px;
+  border-radius: 15px;
+  border: solid rgb(24, 9, 236) 2px;
+}
+.searchField{
+    background-color: rgb(235, 238, 229);
+}

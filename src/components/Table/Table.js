@@ -1,22 +1,27 @@
 import React from "react";
 import TableBody from "../TableBody/TableBody";
-import './table.styles.css';
+import "./table.styles.css";
 
-export default function Table ({ employees, onSortByName, onSortByDOB }) {
+export default function Table({ employees, onSortByName, onSortByDOB }) {
   return (
-    <table className="employeeTable ">
-      <thead>
-        <tr>
-          <th>Image</th>
-          <th onClick={onSortByName}>Name</th>
-          <th>Phone</th>
-          <th>Email</th>
-          <th onClick={onSortByDOB}>DOB</th>
-          <th>Age</th>
-        </tr>
-      </thead>
+    <div className="container ">
+      <div className="employeeTable form-inline justify-content-center">
+      <table>
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th onClick={onSortByName}><btn className="clickMe">Name</btn></th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th onClick={onSortByDOB}><btn className="clickMe">DOB</btn></th>
+            <th>Age</th>
+          </tr>
+        </thead>
 
-      <TableBody results={employees} />
-    </table>
+        <TableBody results={employees}  />
+      </table>
+      </div>
+      
+    </div>
   );
 }
