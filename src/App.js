@@ -106,13 +106,7 @@ class App extends Component {
     return (
       <div className="container ">
         <Navbar />
-
-        <div onClick={this.handleEmployeeSearch}>
-          click
-          </div>
-
         <Search onSearch={this.handleEmployeeSearch} />
-
         <Table
           employees={search ? filteredEmployees : employees}
           onSortByName={this.handleSortByName}
