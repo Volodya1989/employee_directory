@@ -1,0 +1,1 @@
+{"version":3,"sources":["table-body.styles.css"],"names":[],"mappings":"AAAA,yBACI,eACJ","file":"main.d8525b44.chunk.css","sourcesContent":[".table-row:nth-child(2n) {\n    background: #eee;\n}"]}
