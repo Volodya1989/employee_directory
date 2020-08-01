@@ -10,7 +10,6 @@ export default class Table extends Component {
     sortType: "asc",
   };
 
- 
   handleSortName = () => {
     const sortAr = this.state.sortedName;
     if (this.state.sortType === "asc") {
