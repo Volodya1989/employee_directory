@@ -6,19 +6,13 @@ import Wrapper from "./Wrapper";
 
 export default class Search extends Component {
   state = {
+    search: "",
     employees: [],
     filteredEmployees: [],
   };
-
-  handleSearch = (event) => {
-    const search = event.target.value;
-    console.log(search);
-  };
-
   componentDidMount() {
     API.getUsers()
       .then((results) => {
-        // console.log("Results: " + JSON.stringify(results.data.results));
         this.setState({
           employees: results.data.results,
           filteredEmployees: results.data.results,
@@ -29,16 +23,51 @@ export default class Search extends Component {
       });
   }
 
+  handleInputChange = (event) => {
+    const search = event.target.value;
+    console.log(search);
+    const filteredEmployees = this.state.employees.filter(
+      (employee) =>
+        employee.name.first.toLowerCase().indexOf(search.toLowerCase()) > -1
+    );
+
+    this.setState({
+      filteredEmployees,
+      search: search,
+    });
+  };
+  handleSubmit = (event) => {
+    event.preventDefault();
+
+    if (!this.state.search) {
+      alert("Field cannot be empty for valid search");
+    }
+    const filteredEmployees = this.state.employees.filter((employee) =>
+      employee.name.first
+        .toLowerCase()
+        .includes(this.state.search.toLowerCase())
+    );
+    this.setState({ filteredEmployees });
+  };
+
   render() {
     return (
       <Wrapper>
         <Navbar />
         <form>
           <input
+            type="text"
             className="search"
-            placeholder="search"
-            onChange={(e) => this.handleSearch(e)}
+            placeholder="search by name"
+            onChange={(e) => this.handleInputChange(e)}
           />
+          <button
+            type="submit"
+            onClick={(e) => this.handleSubmit(e)}
+            className="btn btn-success"
+          >
+            Search
+          </button>
         </form>
         <Table />
       </Wrapper>
