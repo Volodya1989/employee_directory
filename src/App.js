@@ -33,7 +33,7 @@ class App extends Component {
         console.log(err);
       });
   }
-  //
+  //here we narrow list of employees
   handleEmployeeSearch(event) {
     const search = event.target.value;
     //if the search field is empty we are setting state just to initial settings
