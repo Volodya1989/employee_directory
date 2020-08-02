@@ -5,6 +5,7 @@
     float: none;
     border: violet;
 
+
 }
 table{
     margin-top: 20px;
@@ -16,4 +17,7 @@ padding: 50px 50px;
     background-color: rgb(240, 125, 116);
     padding: 5px 5px;
     border-radius: 10px;
+}
+.tableHeader{
+    background-color: lightblue;
 }

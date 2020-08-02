@@ -8,7 +8,7 @@ export default function Table({ employees, onSortByName, onSortByDOB }) {
       <div className="employeeTable form-inline justify-content-center">
       <table>
         <thead>
-          <tr>
+          <tr className="tableHeader">
             <th>Image</th>
             <th onClick={onSortByName}><btn className="clickMe">Name</btn></th>
             <th>Phone</th>
