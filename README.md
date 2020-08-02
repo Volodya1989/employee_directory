@@ -1,53 +1,73 @@
 # Employee-Directory
 
-## Overview
+![badmath](https://img.shields.io/badge/EMPLOYEE-directory-yellow)
 
-For this assignment, you'll create a employee directory with React. This assignment will require you to break up your application's UI into components, manage component state, and respond to user events.
+![badmath](https://img.shields.io/badge/license-MIT-brightgreen)
 
-## User Story
+## Table of Contents
 
-* As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [URL](#url)
+* [License](#mit_license)
 
-## Business Context
+## Installation
 
-An employee or manager would benefit greatly from being able to view non-sensitive data about other employees. It would be particularly helpful to be able to filter employees by name.
+1. Clone the repo.
+2. Run npm start in terminal.
 
-## Acceptance Criteria
+## Usage
 
-Given a table of random users, when the user loads the page, a table of employees should render. 
+This Employee Directory Application was build by using React.js.
 
-The user should be able to:
-
-  * Sort the table by at least one category
-
-  * Filter the users by at least one property.
-
-## Commit Early and Often
-
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for two reasons:
-
-1. Your commit history is a signal to employers that you are actively working on projects and learning new skills
-
-2. Your commit history allows you to revert your code base in the event that you need to return to a previous state
-
-Follow these guidelines for committing:
-
-* Make single purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits
-
-* Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history
-
-* Don't commit half done work, for the sake of your collaborators (and your future self!)
-
-* Test your application before you commit to ensure functionality at every step in the development process
-
-We would like you to have well over 200 commits by graduation, so commit early and often!
+This application is intended for people who want to  to be able to view  entire employee directory at once so that they have quick access to their information. Also they are able  to sort employees by name or by DOB or to filter employees by names.
 
 
-## Submission on BCS
+The following screenshot demonstrates the application functionality:
 
-You are required to submit the following:
+![Employee Directory demo](public/images/homepage.png)
 
-* the URL to the deployed application
+## Credits
 
-* the URL to the Github repository
+This was a solo project comlepeted by Volodymyr Petrytsya.
+
+## URL
+
+[Link to Deployed Employee Directory Application]( https://volodya1989.github.io/employee_directory/)
+
+
+## MIT_License 
+
+Copyright (c) [2020] [Volodymyr Petrytsya]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+ <!-- ## Contributing
+
+If you would like to contribute to this project, please follow the [Contributor Covenant](https://www.contributor-covenant.org/) guidelines.  -->
+
+
+
+
+
+
+
 
