@@ -2,6 +2,7 @@ import React from "react";
 import "./navbar.styles.css";
 
 const Navbar = () => {
+  //here we return the componenet for navbar
   return (
     <div className="navbar navbar-nav nav-fill w-100">
       <div className="raw">
