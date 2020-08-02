@@ -1,7 +1,7 @@
 import React from "react";
 import Moment from "react-moment";
 import './table-body.styles.css';
-
+//through props we pass data from API call to fill table body with employees information
 const TableBody = (props) => {
   return (
     <tbody className="">
