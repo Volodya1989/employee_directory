@@ -1,23 +1,22 @@
-.employeeTable{
-    max-width: 100%;
-    border-radius: 5px;
-    margin: 0px auto;
-    float: none;
-    border: violet;
-
-
+.employeeTable {
+  width: 100%;
+  border-radius: 5px;
+  margin: 0px auto;
+  float: none;
+  border: violet;
+  table-layout: fixed;
 }
-table{
-    margin-top: 20px;
-    text-align: center;
-padding: 50px 50px;
+table {
+  margin-top: 20px;
+  text-align: center;
+  padding: 50px 50px;
 }
-.clickMe:hover{
-    color: rgb(32, 9, 243);
-    background-color: rgb(240, 125, 116);
-    padding: 5px 5px;
-    border-radius: 10px;
+.clickMe:hover {
+  color: rgb(32, 9, 243);
+  background-color: rgb(240, 125, 116);
+  padding: 5px 5px;
+  border-radius: 10px;
 }
-.tableHeader{
-    background-color: lightblue;
+.tableHeader {
+  background-color: lightblue;
 }
